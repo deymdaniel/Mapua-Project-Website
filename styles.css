@@ -1,0 +1,9 @@
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  color: #333333;
+  background-color: #fcc403;
+}
+
+.navbar-nav {
+  --bs-nav-link-padding-x: 8px;
+}
