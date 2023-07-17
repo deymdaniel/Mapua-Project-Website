@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Mapúa University</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
@@ -10,69 +10,58 @@
       integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="icon" href="/assets/Mapua Logo-01-01.webp" sizes="2x2" />
-    <style>
-       {
-        border: 1px solid;
-      }
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
   </head>
+  <!-- -->
   <body>
-    <nav
-      class="navbar sticky-top navbar-expand-lg"
-      style="background-color: #e1dee3"
-    >
-      <div class="container-fluid">
-        <a href="index.html" class="navbar-brand"
+    <nav class="navbar navbar-expand-md fixed-top">
+      <div class="container">
+        <a href="index.html" class="navbrand"
           ><img
             src="/assets/Mapua-Logo_FA_Signature_RD.webp"
-            alt=""
-            height="36px"
+            alt="Mapua"
+            style="height: 36px"
         /></a>
         <button
           class="navbar-toggler"
-          type="button"
           data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
+          data-bs-target="#nav"
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="16"
-            fill="currentColor"
-            class="bi bi-three-dots"
-            viewBox="0 0 16 16"
-          >
-            <path
-              d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"
-            />
-          </svg>
+          <span class="navbar-toggler-icon"></span>
         </button>
-        <div
-          class="collapse navbar-collapse justify-content-end"
-          id="navbarNav"
-        >
-          <ul class="navbar-nav nav-pills txt">
+        <div class="collapse navbar-collapse justify-content-end" id="nav">
+          <ul class="navbar-nav nav-pills navbar-expand gap-4">
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="index.html">Home</a>
+              <a href="about.html" class="nav-link p-2" style="color: #fcc403"
+                >About</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/about.html">About</a>
+              <a href="help.html" class="nav-link p-2" style="color: #fcc403"
+                >Help</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/help.html">Get Help</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" href="/apply.html">Apply Now</a>
+              <a
+                href="apply.html"
+                class="nav-link p-2"
+                style="background-color: #fcc403; color: #fdfdfd"
+                >Apply</a
+              >
             </li>
           </ul>
         </div>
       </div>
     </nav>
+    <!---->
+
+    <!--BS5 script-->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"

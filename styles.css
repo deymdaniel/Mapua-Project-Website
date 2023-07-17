@@ -1,9 +1,40 @@
-.nav-pills .nav-link.active,
-.nav-pills .show > .nav-link {
-  color: #333333;
-  background-color: #fcc403;
+ {
+  border: 1px solid;
+}
+
+.nav-link {
+  letter-spacing: 0.1em;
 }
 
 .navbar-nav {
-  --bs-nav-link-padding-x: 8px;
+  margin-top: 12px;
+}
+
+@media (min-width: 768px) {
+  #main-page {
+    font-family: Bebas Neue;
+    font-size: 240px;
+    color: #c1213d;
+    letter-spacing: 0.2em;
+    height: 100vh;
+    text-align: center;
+    padding-top: 280px;
+  }
+}
+
+@media (max-width: 767px) {
+  #main-page {
+    font-family: Bebas Neue;
+    font-size: 180px;
+    color: #c1213d;
+    letter-spacing: 0.2em;
+    height: 100vh;
+    text-align: center;
+    padding-top: 280px;
+  }
+}
+
+#info-card {
+  background-color: #333333;
+  color: #fdfdfd;
 }
