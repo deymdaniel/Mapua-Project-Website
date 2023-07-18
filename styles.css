@@ -2,6 +2,10 @@
   border: 1px solid;
 }
 
+html {
+  scroll-snap-type: y mandatory;
+}
+
 .nav-link {
   letter-spacing: 0.1em;
 }
@@ -19,6 +23,7 @@
     height: 100vh;
     text-align: center;
     padding-top: 280px;
+    scroll-snap-align: start;
   }
 }
 
@@ -31,10 +36,47 @@
     height: 100vh;
     text-align: center;
     padding-top: 280px;
+    scroll-snap-align: start;
   }
 }
 
-#info-card {
+@media (max-width: 576px) {
+  #main-page {
+    font-family: Bebas Neue;
+    font-size: 120px;
+    color: #c1213d;
+    letter-spacing: 0.2em;
+    height: 100vh;
+    text-align: center;
+    padding-top: 280px;
+    scroll-snap-align: start;
+  }
+}
+
+#info1 {
+  height: 100vh;
   background-color: #333333;
+  font-family: Bebas Neue;
+  padding-top: 160px;
+  scroll-snap-align: start;
+}
+
+.quote {
+  font-size: 48px;
+  line-height: 1.1;
+  letter-spacing: 0.1em;
+  text-align: center;
+  color: #fdfdfd;
+}
+
+.highlight {
+  color: #fcc403;
+  font-size: 128px;
+}
+
+.THE {
+  font-size: 24px;
+  text-align: center;
+  letter-spacing: 0.1em;
   color: #fdfdfd;
 }
