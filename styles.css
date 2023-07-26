@@ -3,26 +3,37 @@
 }
 
 html {
-  scroll-snap-type: y mandatory;
+  scroll-snap-type: y proximity;
 }
 
 .nav-link {
   letter-spacing: 0.1em;
+  font-weight: bold;
 }
 
-.navbar-nav {
-  margin-top: 12px;
+.navbar {
+  padding: 0;
 }
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='hsl(350, 71%, 44%)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+.navbar .container-fluid {
+  background-color: #fdfdfd;
 
+  padding: 12px;
+}
+.container-fluid {
+  background-color: #fdfdfd;
+}
 @media (min-width: 768px) {
   #main-page {
     font-family: Bebas Neue;
     font-size: 240px;
-    color: #c1213d;
+    color: hsl(350, 71%, 44%);
     letter-spacing: 0.2em;
     height: 100vh;
     text-align: center;
-    padding-top: 280px;
+    padding-top: 250px;
     scroll-snap-align: start;
   }
 }
@@ -35,7 +46,8 @@ html {
     letter-spacing: 0.2em;
     height: 100vh;
     text-align: center;
-    padding-top: 280px;
+    padding-top: 250px;
+
     scroll-snap-align: start;
   }
 }
@@ -49,6 +61,7 @@ html {
     height: 100vh;
     text-align: center;
     padding-top: 280px;
+
     scroll-snap-align: start;
   }
 }
@@ -57,7 +70,7 @@ html {
   height: 100vh;
   background-color: #333333;
   font-family: Bebas Neue;
-  padding-top: 160px;
+
   scroll-snap-align: start;
 }
 
@@ -79,4 +92,56 @@ html {
   text-align: center;
   letter-spacing: 0.1em;
   color: #fdfdfd;
+}
+
+div#program-page {
+  scroll-snap-align: start;
+}
+
+.program-title {
+  font-family: Bebas Neue;
+  font-size: 64px;
+  padding: 164px 0 72px 0;
+  color: #c1213d;
+}
+
+#program-page .card-title {
+  font-size: 24px;
+  font-weight: bold;
+  padding: 12px 0 12px 0;
+  color: #fcc403;
+  text-align: center;
+}
+
+div#news {
+  scroll-snap-align: start;
+  background-color: #333333;
+  color: #fdfdfd;
+}
+
+.news-content {
+}
+.news-title div {
+  font-size: 36px;
+  font-family: Bebas Neue;
+  letter-spacing: 0.1em;
+}
+.news-title p {
+  font-size: 16px;
+}
+
+.news-options {
+  font-size: 86px;
+
+  font-family: Bebas Neue;
+}
+
+.news-options a {
+  text-decoration: none;
+  color: #c1213d;
+}
+
+.navbar-toggler {
+  border: none;
+  color: #c1213d;
 }

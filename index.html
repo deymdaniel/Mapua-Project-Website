@@ -20,8 +20,8 @@
   </head>
   <!-- -->
   <body>
-    <nav class="navbar navbar-expand-md fixed-top">
-      <div class="container">
+    <nav class="navbar navbar-expand-md fixed-top shadow">
+      <div class="container-fluid">
         <a href="index.html" class="navbrand"
           ><img
             src="./assets/mapua big logo.jpg"
@@ -36,19 +36,19 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse justify-content-end" id="nav">
-          <ul class="navbar-nav nav-pills navbar-expand gap-4">
+          <ul class="navbar-nav nav-pills navbar-expand gap-3 pt-0">
             <li class="nav-item">
-              <a href="about.html" class="nav-link p-2" style="color: #fcc403"
+              <a href="about.html" class="nav-link" style="color: #fcc403"
                 >About</a
               >
             </li>
             <li class="nav-item">
-              <a href="help.html" class="nav-link p-2" style="color: #fcc403"
+              <a href="help.html" class="nav-link" style="color: #fcc403"
                 >Help</a
               >
             </li>
             <li class="nav-item">
-              <a href="apply.html" class="nav-link p-2" style="color: #fcc403"
+              <a href="apply.html" class="nav-link" style="color: #fcc403"
                 >Apply</a
               >
             </li>
@@ -57,10 +57,12 @@
       </div>
     </nav>
     <!---->
-    <div class="container">
+    <div
+      class="container-fluid d-flex justify-content-center align-items-center"
+    >
       <div id="main-page">Mapúa</div>
     </div>
-    <div class="container-fluid" id="info1">
+    <div class="container-fluid d-flex align-items-center" id="info1">
       <div class="row">
         <div class="quote">
           Among the <br /><span class="highlight">Top 6%</span
@@ -71,6 +73,90 @@
         </div>
       </div>
     </div>
+    <div
+      class="container min-vh-100 d-flex flex-column align-items-center"
+      id="program-page"
+    >
+      <div class="program-title">Programs</div>
+      <div class="row pb-5">
+        <div class="col-lg-3 col-md-6 col-sm-12 g-5">
+          <img
+            src="./assets/t2.webp"
+            alt=""
+            class="card-img rounded-4 shadow"
+          />
+          <p class="card-title">Undergradute Programs</p>
+          <p class="card-body">
+            Explore a range of locally and internationally recognized programs
+            with rich opportunities to launch your career in any field or
+            industry.
+          </p>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12 g-5">
+          <img
+            src="./assets/t1.webp"
+            alt=""
+            class="card-img rounded-4 shadow"
+          />
+          <p class="card-title">Fully Online Programs</p>
+          <p class="card-body">
+            Get access to topnotch academic programs wherever you are in the
+            world through our state-of-the-art online learning space, resources,
+            and tools.
+          </p>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12 g-5">
+          <img
+            src="./assets/t3.webp"
+            alt=""
+            class="card-img rounded-4 shadow"
+          />
+          <p class="card-title">Graduate Programs</p>
+          <p class="card-body">
+            Grow as a leader and advance in your profession with our master’s
+            degree and doctorate programs.
+          </p>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12 g-5">
+          <img
+            src="./assets/t4.webp"
+            alt=""
+            class="card-img rounded-4 shadow"
+          />
+          <p class="card-title">Senior Highschool</p>
+          <p class="card-body">
+            Prepare to achieve more in the future with our Academic and Arts &
+            Design tracks.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div
+      class="wide-container vh-100 align-items-center justify-content-between d-flex"
+      id="news"
+    >
+      <div class="container-lg">
+        <div
+          class="news-content d-md-flex align-items-center justify-content-between"
+        >
+          <div class="news-title text-center text-md-start pb-sm-5 pb-lg-0">
+            <div>Info</div>
+            <p>What's happening at Mapúa University</p>
+          </div>
+          <div
+            class="news-options text-md-end text-center pt-sm-3 pt-lg-0 lh-1"
+          >
+            <div><a href="#">News</a></div>
+            <div><a href="#">Events</a></div>
+
+            <div>
+              <a href="#">Announcements</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!--BS5 script-->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
