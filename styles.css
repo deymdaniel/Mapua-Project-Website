@@ -47,8 +47,6 @@ body {
     color: #c1213d;
     letter-spacing: 0.2em;
     height: 100vh;
-    text-align: center;
-    padding-top: 250px;
 
     scroll-snap-align: start;
   }
@@ -61,8 +59,6 @@ body {
     color: #c1213d;
     letter-spacing: 0.2em;
     height: 100vh;
-    text-align: center;
-    padding-top: 280px;
 
     scroll-snap-align: start;
   }
@@ -122,8 +118,21 @@ div#news {
   color: #333333;
 }
 
-.news-content {
+@media (min-width: 577px) {
+  .news-options {
+    font-size: 86px;
+
+    font-family: Bebas Neue;
+  }
 }
+@media (max-width: 576px) {
+  .news-options {
+    font-size: 48px;
+
+    font-family: Bebas Neue;
+  }
+}
+
 .news-title div {
   font-size: 36px;
   font-family: Bebas Neue;
@@ -131,12 +140,6 @@ div#news {
 }
 .news-title p {
   font-size: 16px;
-}
-
-.news-options {
-  font-size: 86px;
-
-  font-family: Bebas Neue;
 }
 
 .news-options a {
