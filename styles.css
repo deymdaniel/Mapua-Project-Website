@@ -10,7 +10,9 @@ html {
   letter-spacing: 0.1em;
   font-weight: bold;
 }
-
+body {
+  box-sizing: border-box;
+}
 .navbar {
   padding: 0;
 }
@@ -20,20 +22,20 @@ html {
 .navbar .container-fluid {
   background-color: #fdfdfd;
 
-  padding: 12px;
+  padding: 8px;
 }
 .container-fluid {
-  background-color: #fdfdfd;
+  background-color: #333333;
 }
 @media (min-width: 768px) {
-  #main-page {
+  #main-page,
+  h1 {
     font-family: Bebas Neue;
     font-size: 240px;
     color: hsl(350, 71%, 44%);
     letter-spacing: 0.2em;
     height: 100vh;
-    text-align: center;
-    padding-top: 250px;
+    align-items: center;
     scroll-snap-align: start;
   }
 }
@@ -68,7 +70,7 @@ html {
 
 #info1 {
   height: 100vh;
-  background-color: #333333;
+  background-color: #fdfdfd;
   font-family: Bebas Neue;
 
   scroll-snap-align: start;
@@ -79,7 +81,7 @@ html {
   line-height: 1.1;
   letter-spacing: 0.1em;
   text-align: center;
-  color: #fdfdfd;
+  color: #333333;
 }
 
 .highlight {
@@ -96,12 +98,13 @@ html {
 
 div#program-page {
   scroll-snap-align: start;
+  background-color: #333333;
+  color: #fdfdfd;
 }
 
 .program-title {
   font-family: Bebas Neue;
   font-size: 64px;
-  padding: 164px 0 72px 0;
   color: #c1213d;
 }
 
@@ -115,8 +118,8 @@ div#program-page {
 
 div#news {
   scroll-snap-align: start;
-  background-color: #333333;
-  color: #fdfdfd;
+  background-color: #fdfdfd;
+  color: #333333;
 }
 
 .news-content {
@@ -144,4 +147,26 @@ div#news {
 .navbar-toggler {
   border: none;
   color: #c1213d;
+}
+
+#footer {
+  background-color: #333333;
+  color: #fdfdfd;
+  border-top: 10px solid #c1213d;
+  font-size: small;
+  scroll-snap-align: start;
+}
+
+#footer h2 {
+  font-size: large;
+  color: #fcc403;
+}
+
+#footer a,
+li,
+ul {
+  color: #fdfdfd;
+  text-decoration: none;
+  list-style: none;
+  padding: 0;
 }
