@@ -26,18 +26,17 @@ body {
 }
 .navbar {
   padding: 0;
+  scroll-snap-align: start;
 }
 
 .navbar-toggler-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='hsl(350, 71%, 44%)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
 .navbar .container-fluid {
-  background-color: #fdfdfd;
-
   padding: 8px;
 }
 .container-fluid {
-  background-color: #333333;
+  background-color: #fdfdfd;
 }
 @media (min-width: 768px) {
   #main-page,
@@ -78,9 +77,8 @@ body {
 
 #info1 {
   height: 100vh;
-  background-color: #fdfdfd;
+  background-color: #333333;
   font-family: Bebas Neue;
-
   scroll-snap-align: start;
 }
 
@@ -89,7 +87,7 @@ body {
   line-height: 1.1;
   letter-spacing: 0.1em;
   text-align: center;
-  color: #333333;
+  color: #fdfdfd;
 }
 
 .highlight {
@@ -106,18 +104,21 @@ body {
 
 div#program-page {
   scroll-snap-align: start end;
-  background-color: #333333;
-  color: #fdfdfd;
+  background-color: #fdfdfd;
+  color: #333333;
+  font-size: large;
+  font-weight: 500;
 }
 
 .program-title {
   font-family: Bebas Neue;
   font-size: 64px;
+  letter-spacing: 0.1em;
   color: #c1213d;
 }
 
 #program-page .card-title {
-  font-size: 24px;
+  font-size: xx-large;
   font-weight: bold;
   padding: 12px 0 12px 0;
   color: #fcc403;
@@ -126,8 +127,8 @@ div#program-page {
 
 div#news {
   scroll-snap-align: start;
-  background-color: #fdfdfd;
-  color: #333333;
+  background-color: #333333;
+  color: #fdfdfd;
 }
 
 @media (min-width: 577px) {
@@ -152,6 +153,7 @@ div#news {
 }
 .news-title p {
   font-size: 16px;
+  font-weight: bold;
 }
 
 .news-options a {
@@ -165,8 +167,8 @@ div#news {
 }
 
 #footer {
-  background-color: #333333;
-  color: #fdfdfd;
+  background-color: #fdfdfd;
+  color: #333333;
   border-top: 10px solid #c1213d;
   font-size: small;
   scroll-snap-align: start;
@@ -180,7 +182,7 @@ div#news {
 #footer a,
 li,
 ul {
-  color: #fdfdfd;
+  color: #333333;
   text-decoration: none;
   list-style: none;
   padding: 0;
