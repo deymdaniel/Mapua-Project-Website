@@ -215,3 +215,11 @@ label {
   background-color: #c1213d;
   border-color: #c1213d;
 }
+
+.contact {
+  font-size: 64px;
+
+  font-family: Bebas Neue;
+  letter-spacing: 0.1em;
+  color: #c1213d;
+}

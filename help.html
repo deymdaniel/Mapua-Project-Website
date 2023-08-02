@@ -61,6 +61,279 @@
       </div>
     </nav>
     <!---->
+    <div
+      class="container-sm d-flex vh-100 flex-column gap-5 justify-content-center"
+    >
+      <h2 class="form-title text-center">Contact Us</h2>
+      <div class="container d-flex">
+        <div class="line me-4"></div>
+
+        <form>
+          <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="name"
+              name="name"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              name="email"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <label for="phone" class="form-label">Phone</label>
+            <input
+              type="tel"
+              class="form-control"
+              id="phone"
+              name="phone"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <label for="type" class="form-label">Type</label>
+            <select class="form-select" id="type" name="type" required>
+              <option value="" selected disabled>Select type</option>
+              <option value="">Application</option>
+              <option value="">Payment</option>
+              <option value="">Enrollment</option>
+              <option value="">Assessment</option>
+              <option value="">Program</option>
+              <option value="">Other</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="case-reason" class="form-label">Case Reason</label>
+            <select class="form-select" id="type" name="type" required>
+              <option value="" selected disabled>Select case reason</option>
+              <option value="Forgot Username and Password">
+                Forgot Username and Password
+              </option>
+              <option value="Http 404 Error/Error Title">
+                Http 404 Error/Error Title
+              </option>
+              <option value="Application Form is incomplete">
+                Application Form is incomplete
+              </option>
+              <option value="Cannot proceed to the next step">
+                Cannot proceed to the next step
+              </option>
+              <option value="Application Deadline">Application Deadline</option>
+              <option value="Incorrect Username and Password">
+                Incorrect Username and Password
+              </option>
+              <option value="Cardinal EDGE Glitch">Cardinal EDGE Glitch</option>
+              <option value="How to view the results">
+                How to view the results
+              </option>
+              <option value="Can I get my score (for scholarship)?">
+                Can I get my score (for scholarship)?
+              </option>
+              <option value="MPASS Deadline">MPASS Deadline</option>
+              <option value="MPASS Exemption">MPASS Exemption</option>
+              <option value="MPASS Refund">MPASS Refund</option>
+              <option value="Validity of MPASS">Validity of MPASS</option>
+              <option value="MPASS Retake">MPASS Retake</option>
+              <option value="Transaction Failed">Transaction Failed</option>
+              <option value="Where can I find the reference number?">
+                Where can I find the reference number?
+              </option>
+              <option value="Can I change the payment channel?">
+                Can I change the payment channel?
+              </option>
+              <option value="No OR Found (Internal, for validation of payment)">
+                No OR Found (Internal, for validation of payment)
+              </option>
+              <option value="How to pay for Tuition Fee?">
+                How to pay for Tuition Fee?
+              </option>
+              <option value="How much is the tuition fee?">
+                How much is the tuition fee?
+              </option>
+              <option value="What are the modes of payment?">
+                What are the modes of payment?
+              </option>
+              <option value="How to enroll?">How to enroll?</option>
+              <option value="Enrollment Deadline">Enrollment Deadline</option>
+              <option value="Reservation Fee refund">
+                Reservation Fee refund
+              </option>
+              <option value="SDS Issue / update">SDS Issue / update</option>
+              <option value="No section available">No section available</option>
+              <option value="No schedule available">
+                No schedule available
+              </option>
+              <option value="Change Program/Strand">
+                Change Program/Strand
+              </option>
+              <option value="Change of Schedule">Change of Schedule</option>
+              <option value="Change Section">Change Section</option>
+              <option value="Change of Mode of Payment">
+                Change of Mode of Payment
+              </option>
+              <option
+                value='How does the "Matriculation Fee - Initial Payment of 5000 or 10000 work"?'
+              >
+                How does the "Matriculation Fee - Initial Payment of 5000 or
+                10000 work"?
+              </option>
+              <option
+                value="Reservation fee was not deducted from my tuition fee"
+              >
+                Reservation fee was not deducted from my tuition fee
+              </option>
+              <option value="Tuition Fee Discrepancy">
+                Tuition Fee Discrepancy
+              </option>
+              <option value="Payment Posting">Payment Posting</option>
+              <option value="Bridging Inquiries">Bridging Inquiries</option>
+              <option value="Cancellation of Enrollment">
+                Cancellation of Enrollment
+              </option>
+              <option value="Submission of Requirements">
+                Submission of Requirements
+              </option>
+              <option value="When is the start of classes?">
+                When is the start of classes?
+              </option>
+              <option value="Availment of Early Bird Discount">
+                Availment of Early Bird Discount
+              </option>
+              <option
+                value="Reassessment of Fees (Scholarships and Discounts deducted)"
+              >
+                Reassessment of Fees (Scholarships and Discounts deducted)
+              </option>
+              <option value="What are the available scholarship offerings?">
+                What are the available scholarship offerings?
+              </option>
+              <option value="Deadline of Scholarship Application">
+                Deadline of Scholarship Application
+              </option>
+              <option value="Request a copy of curriculum">
+                Request a copy of curriculum
+              </option>
+              <option value="How to get my ID?">How to get my ID?</option>
+              <option value="Curriculum Inaccuracy">
+                Curriculum Inaccuracy
+              </option>
+              <option value="Cannot activate my MyMapua Account">
+                Cannot activate my MyMapua Account
+              </option>
+              <option
+                value="Blackboard account is locked (For enrolled students)"
+              >
+                Blackboard account is locked (For enrolled students)
+              </option>
+              <option value="How to access Parent Portal">
+                How to access Parent Portal
+              </option>
+              <option value="Viewing of GSA/eCM">Viewing of GSA/eCM</option>
+              <option value="Program Specific Concerns">
+                Program Specific Concerns
+              </option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="subject" class="form-label">Subject</label>
+            <input
+              type="text"
+              class="form-control"
+              id="subject"
+              name="subject"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <label for="description" class="form-label">Description</label>
+            <textarea
+              class="form-control"
+              id="description"
+              name="description"
+              rows="6"
+              required
+            ></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+    </div>
+    <!--footer-->
+    <div class="container-fluid p-5" id="footer">
+      <div class="row">
+        <div class="col">
+          <div class="row">
+            <h2>Intramuros</h2>
+            <p>
+              658 Muralla St., Intramuros, Manila 1002, Philippines <br />
+              +63(2) 8247-5000
+            </p>
+          </div>
+          <div class="row">
+            <h2>Makati</h2>
+            <p>
+              1191 Pablo Ocampo Sr. Extension, Brgy. Sta. Cruz, Makati City,
+              Philippines <br />+63(2) 8891-0837; +63(2) 8891-0843
+            </p>
+          </div>
+        </div>
+        <div class="col-auto">
+          <h2>Get Connected</h2>
+          <ul>
+            <li>
+              <i class="bi bi-facebook"></i><a href="#" id="">/MapuaUniv</a>
+            </li>
+            <li>
+              <i class="bi bi-youtube"></i><a href="#" id="">/Mapua1925</a>
+            </li>
+            <li>
+              <i class="bi bi-instagram"></i><a href="#" id="">/MapuaUniv</a>
+            </li>
+            <li>
+              <i class="bi bi-twitter"></i><a href="#" id="">@MapuaUniv</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-auto">
+          <h2>Website</h2>
+          <ul>
+            <li>About</li>
+            <li>Portal</li>
+            <li>Policy</li>
+          </ul>
+        </div>
+        <div class="col-auto">
+          <h2>Affiliates</h2>
+          <ul>
+            <li>Mapúa UOX</li>
+            <li>Mapúa Txt</li>
+            <li>Mapúa CCESC</li>
+            <li>PACU</li>
+            <li>Yuchengco Museum</li>
+          </ul>
+        </div>
+        <div class="col-auto">
+          <h2>One Malayan</h2>
+          <li>Malayan Colleges Mindanao</li>
+          <li>Malayan Colleges Laguna</li>
+          <li>Malayan High School of Science</li>
+        </div>
+        <div class="col-auto">
+          <h2>Careers</h2>
+          <li>Jobs at Mapua</li>
+          <li>Careerlink</li>
+        </div>
+      </div>
+    </div>
 
     <!--BS5 script-->
     <script
