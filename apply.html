@@ -61,6 +61,277 @@
       </div>
     </nav>
     <!---->
+    <div
+      class="form container-sm vh-100 d-flex flex-column justify-content-center gap-5"
+    >
+      <div class="form-title text-center">Application Form</div>
+      <div class="container d-flex">
+        <div class="line me-4"></div>
+        <form class="w-100">
+          <div class="mb-3">
+            <label for="fullname" class="form-label">Full Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="fullname"
+              name="fullname"
+              required
+            />
+          </div>
+          <label class="form-label" for="date">Date of Birth</label>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="mb-3">
+                <select class="form-select" id="day" name="day" required>
+                  <option value="" selected disabled>Select day</option>
+                  <option value="01">1</option>
+                  <option value="02">2</option>
+                  <option value="03">3</option>
+                  <option value="04">4</option>
+                  <option value="05">5</option>
+                  <option value="06">6</option>
+                  <option value="07">7</option>
+                  <option value="08">8</option>
+                  <option value="09">9</option>
+                  <option value="10">10</option>
+                  <option value="11">11</option>
+                  <option value="12">12</option>
+                  <option value="13">13</option>
+                  <option value="14">14</option>
+                  <option value="15">15</option>
+                  <option value="16">16</option>
+                  <option value="17">17</option>
+                  <option value="18">18</option>
+                  <option value="19">19</option>
+                  <option value="20">20</option>
+                  <option value="21">21</option>
+                  <option value="22">22</option>
+                  <option value="23">23</option>
+                  <option value="24">24</option>
+                  <option value="25">25</option>
+                  <option value="26">26</option>
+                  <option value="27">27</option>
+                  <option value="28">28</option>
+                  <option value="29">29</option>
+                  <option value="30">30</option>
+                  <option value="31">31</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="mb-3">
+                <select class="form-select" id="month" name="month" required>
+                  <option value="" selected disabled>Select month</option>
+                  <option value="01">January</option>
+                  <option value="02">February</option>
+                  <option value="03">March</option>
+                  <option value="04">April</option>
+                  <option value="05">May</option>
+                  <option value="06">June</option>
+                  <option value="07">July</option>
+                  <option value="08">August</option>
+                  <option value="09">September</option>
+                  <option value="10">October</option>
+                  <option value="11">November</option>
+                  <option value="12">December</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="mb-3">
+                <select class="form-select" id="year" name="year" required>
+                  <option value="" selected disabled>Select year</option>
+                  <option value="2000">2000</option>
+                  <option value="2001">2001</option>
+                  <option value="2002">2002</option>
+                  <option value="2003">2003</option>
+                  <option value="2004">2004</option>
+                  <option value="2005">2005</option>
+                  <option value="2006">2006</option>
+                  <option value="2007">2007</option>
+                  <option value="2008">2008</option>
+                  <option value="2009">2009</option>
+                  <option value="2010">2010</option>
+                  <option value="2011">2011</option>
+                  <option value="2012">2012</option>
+                  <option value="2013">2013</option>
+                  <option value="2014">2014</option>
+                  <option value="2015">2015</option>
+                  <option value="2016">2016</option>
+                  <option value="2017">2017</option>
+                  <option value="2018">2018</option>
+                  <option value="2019">2019</option>
+                  <option value="2020">2020</option>
+                  <option value="2021">2021</option>
+                  <option value="2022">2022</option>
+                  <option value="2023">2023</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              name="email"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <label for="phone" class="form-label">Phone</label>
+            <input
+              type="tel"
+              class="form-control"
+              id="phone"
+              name="phone"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <label for="address" class="form-label">Address</label>
+            <input
+              type="text"
+              class="form-control"
+              id="address"
+              name="address"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <label for="program" class="form-label">Program</label>
+            <select class="form-select" id="major" name="program" required>
+              <option value="" selected disabled>
+                Select your intended program
+              </option>
+              <option value="">Undergradute</option>
+              <option value="">Fully Online</option>
+              <option value="">Graduate</option>
+              <option value="">Senior Highschool</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="major" class="form-label">Intended Major</label>
+            <select class="form-select" id="major" name="major" required>
+              <option value="" selected disabled>
+                Select your intended major
+              </option>
+              <option value="" disabled>Senior Highscool</option>
+              <option value="stem">
+                Science, Technology, Engineering, and Mathematics
+              </option>
+              <option value="abm">Accounting, Business, and Management</option>
+              <option value="humms">Humanities and Social Sciences</option>
+              <option value="gas">General Academic Strand</option>
+              <option value="" disabled>College</option>
+              <option value="computer_science">Computer Science</option>
+              <option value="information_technology">
+                Information Technology
+              </option>
+              <option value="software_engineering">Software Engineering</option>
+              <option value="computer_engineering">Computer Engineering</option>
+              <option value="electronics_engineering">
+                Electronics Engineering
+              </option>
+              <option value="mechanical_engineering">
+                Mechanical Engineering
+              </option>
+              <option value="civil_engineering">Civil Engineering</option>
+              <option value="chemical_engineering">Chemical Engineering</option>
+              <option value="electrical_engineering">
+                Electrical Engineering
+              </option>
+              <option value="industrial_engineering">
+                Industrial Engineering
+              </option>
+              <option value="architecture">Architecture</option>
+              <option value="business_management">Business Management</option>
+              <option value="accountancy">Accountancy</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="essay" class="form-label">Personal Essay</label>
+            <textarea
+              class="form-control"
+              id="essay"
+              name="essay"
+              rows="6"
+              required
+            ></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+    </div>
+    <!--footer-->
+    <div class="container-fluid p-5" id="footer">
+      <div class="row">
+        <div class="col">
+          <div class="row">
+            <h2>Intramuros</h2>
+            <p>
+              658 Muralla St., Intramuros, Manila 1002, Philippines <br />
+              +63(2) 8247-5000
+            </p>
+          </div>
+          <div class="row">
+            <h2>Makati</h2>
+            <p>
+              1191 Pablo Ocampo Sr. Extension, Brgy. Sta. Cruz, Makati City,
+              Philippines <br />+63(2) 8891-0837; +63(2) 8891-0843
+            </p>
+          </div>
+        </div>
+        <div class="col-auto">
+          <h2>Get Connected</h2>
+          <ul>
+            <li>
+              <i class="bi bi-facebook"></i><a href="#" id="">/MapuaUniv</a>
+            </li>
+            <li>
+              <i class="bi bi-youtube"></i><a href="#" id="">/Mapua1925</a>
+            </li>
+            <li>
+              <i class="bi bi-instagram"></i><a href="#" id="">/MapuaUniv</a>
+            </li>
+            <li>
+              <i class="bi bi-twitter"></i><a href="#" id="">@MapuaUniv</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-auto">
+          <h2>Website</h2>
+          <ul>
+            <li>About</li>
+            <li>Portal</li>
+            <li>Policy</li>
+          </ul>
+        </div>
+        <div class="col-auto">
+          <h2>Affiliates</h2>
+          <ul>
+            <li>Mapúa UOX</li>
+            <li>Mapúa Txt</li>
+            <li>Mapúa CCESC</li>
+            <li>PACU</li>
+            <li>Yuchengco Museum</li>
+          </ul>
+        </div>
+        <div class="col-auto">
+          <h2>One Malayan</h2>
+          <li>Malayan Colleges Mindanao</li>
+          <li>Malayan Colleges Laguna</li>
+          <li>Malayan High School of Science</li>
+        </div>
+        <div class="col-auto">
+          <h2>Careers</h2>
+          <li>Jobs at Mapua</li>
+          <li>Careerlink</li>
+        </div>
+      </div>
+    </div>
 
     <!--BS5 script-->
     <script

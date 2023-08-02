@@ -191,12 +191,16 @@ ul {
 .form {
   scroll-snap-align: start;
 }
+.line {
+  border-left: 6px solid #c1213d;
+}
 label {
   font-weight: bold;
 }
 .form-title {
   font-size: 64px;
   font-family: Bebas Neue;
+  letter-spacing: 0.1em;
   color: #c1213d;
 }
 
