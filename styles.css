@@ -217,10 +217,7 @@ label {
 }
 
 .contact {
-  font-size: 64px;
-  font-family: Bebas Neue;
-  letter-spacing: 0.1em;
-  color: #c1213d;
+  scroll-snap-align: start;
 }
 
 .about {
@@ -238,6 +235,7 @@ html,
 
 .logo {
   scroll-snap-align: start;
+  background-color: #333333;
 }
 
 .history p {
@@ -247,5 +245,6 @@ html,
 
 .logo p {
   font-size: large;
+  color: #fdfdfd;
   font-weight: 300;
 }
