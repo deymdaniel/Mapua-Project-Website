@@ -187,3 +187,27 @@ ul {
   list-style: none;
   padding: 0;
 }
+
+.form {
+  scroll-snap-align: start;
+}
+label {
+  font-weight: bold;
+}
+.form-title {
+  font-size: 64px;
+  font-family: Bebas Neue;
+  color: #c1213d;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #fcc403;
+  border-color: #fcc403;
+}
+
+.btn-primary:hover {
+  color: #fff;
+  background-color: #c1213d;
+  border-color: #c1213d;
+}
