@@ -1,0 +1,111 @@
+/* Page sections */
+#info1 {
+  height: 100vh;
+  background: linear-gradient(135deg, #333333 0%, #2c2c2c 100%);
+  font-family: Bebas Neue;
+  scroll-snap-align: start;
+  position: relative;
+}
+
+#info1::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="rgba(255,255,255,0.02)"/><circle cx="75" cy="75" r="1" fill="rgba(255,255,255,0.02)"/><circle cx="50" cy="10" r="1" fill="rgba(255,255,255,0.02)"/></pattern></defs><rect width="100%" height="100%" fill="url(%23grain)"/></svg>');
+  opacity: 0.3;
+}
+
+.quote {
+  font-size: 48px;
+  line-height: 1.1;
+  letter-spacing: 0.1em;
+  text-align: center;
+  color: #fdfdfd;
+}
+
+.highlight {
+  color: #fcc403;
+  font-size: 128px;
+}
+
+.THE {
+  font-size: 24px;
+  text-align: center;
+  letter-spacing: 0.1em;
+  color: #fdfdfd;
+}
+
+/* News section */
+div#news {
+  scroll-snap-align: start;
+  background: linear-gradient(135deg, #333333 0%, #2c2c2c 100%);
+  color: #fdfdfd;
+  position: relative;
+}
+
+@media (min-width: 577px) {
+  .news-options {
+    font-size: 86px;
+    font-family: Bebas Neue;
+  }
+}
+
+@media (max-width: 576px) {
+  .news-options {
+    font-size: 48px;
+    font-family: Bebas Neue;
+  }
+}
+
+.news-title div {
+  font-size: 36px;
+  font-family: Bebas Neue;
+  letter-spacing: 0.1em;
+}
+
+.news-title p {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.news-options a {
+  text-decoration: none;
+  color: #c1213d;
+}
+
+.news-options a:hover {
+  color: #fcc403;
+  transform: translateX(10px);
+  transition: all 0.3s ease;
+}
+
+/* Footer */
+#footer {
+  background: linear-gradient(135deg, #fdfdfd 0%, #f8f9fa 100%);
+  color: #333333;
+  border-top: 10px solid #c1213d;
+  font-size: small;
+  scroll-snap-align: start;
+}
+
+#footer h2 {
+  font-size: large;
+  color: #fcc403;
+}
+
+#footer a,
+li,
+ul {
+  color: #333333;
+  text-decoration: none;
+  list-style: none;
+  padding: 0;
+}
+
+#footer a:hover {
+  color: #c1213d;
+  transition: color 0.3s ease;
+}

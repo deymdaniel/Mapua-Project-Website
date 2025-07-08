@@ -20,11 +20,11 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
     />
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./styles-new.css" />
   </head>
 
-  <body>
-    <nav class="navbar navbar-expand-lg border-bottom">
+  <body class="preload">
+    <nav class="navbar navbar-expand-lg border-bottom transparent">
       <div class="container-fluid">
         <a href="index.html" class="navbrand"
           ><img
@@ -66,7 +66,15 @@
       class="container-fluid d-flex align-items-center justify-content-center ps-5"
       id="main-page"
     >
-      <div class="">Mapúa</div>
+      <div class="hero-content">
+        <div class="hero-text">Mapúa</div>
+        <div class="scroll-indicator">
+          <div class="scroll-arrow">
+            <i class="bi bi-chevron-down"></i>
+          </div>
+          <span class="scroll-text">Scroll to explore</span>
+        </div>
+      </div>
     </div>
 
     <div
@@ -88,56 +96,66 @@
       id="program-page"
     >
       <div class="program-title pt-5">Programs</div>
-      <div class="row pt-5 pb-5">
-        <div class="col-lg-3 col-md-6 col-sm-12 g-5">
-          <img
-            src="./assets/t2.webp"
-            alt=""
-            class="card-img rounded-4 shadow"
-          />
-          <p class="card-title">Undergradute Programs</p>
-          <p class="card-body">
-            Explore a range of locally and internationally recognized programs
-            with rich opportunities to launch your career in any field or
-            industry.
-          </p>
-        </div>
-        <div class="col-lg-3 col-md-6 col-sm-12 g-5">
-          <img
-            src="./assets/t1.webp"
-            alt=""
-            class="card-img rounded-4 shadow"
-          />
-          <p class="card-title">Fully Online Programs</p>
-          <p class="card-body">
-            Get access to topnotch academic programs wherever you are in the
-            world through our state-of-the-art online learning space, resources,
-            and tools.
-          </p>
-        </div>
-        <div class="col-lg-3 col-md-6 col-sm-12 g-5">
-          <img
-            src="./assets/t3.webp"
-            alt=""
-            class="card-img rounded-4 shadow"
-          />
-          <p class="card-title">Graduate Programs</p>
-          <p class="card-body">
-            Grow as a leader and advance in your profession with our master’s
-            degree and doctorate programs.
-          </p>
-        </div>
-        <div class="col-lg-3 col-md-6 col-sm-12 g-5">
-          <img
-            src="./assets/t4.webp"
-            alt=""
-            class="card-img rounded-4 shadow"
-          />
-          <p class="card-title">Senior Highschool</p>
-          <p class="card-body">
-            Prepare to achieve more in the future with our Academic and Arts &
-            Design tracks.
-          </p>
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-3 col-md-6 col-sm-12">
+            <div class="program-card">
+              <img
+                src="./assets/t2.webp"
+                alt="Undergraduate Programs"
+                class="card-img"
+              />
+              <h3 class="card-title">Undergraduate Programs</h3>
+              <p class="card-body">
+                Explore a range of locally and internationally recognized programs
+                with rich opportunities to launch your career in any field or
+                industry.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-12">
+            <div class="program-card">
+              <img
+                src="./assets/t1.webp"
+                alt="Fully Online Programs"
+                class="card-img"
+              />
+              <h3 class="card-title">Fully Online Programs</h3>
+              <p class="card-body">
+                Get access to topnotch academic programs wherever you are in the
+                world through our state-of-the-art online learning space, resources,
+                and tools.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-12">
+            <div class="program-card">
+              <img
+                src="./assets/t3.webp"
+                alt="Graduate Programs"
+                class="card-img"
+              />
+              <h3 class="card-title">Graduate Programs</h3>
+              <p class="card-body">
+                Grow as a leader and advance in your profession with our master's
+                degree and doctorate programs.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-12">
+            <div class="program-card">
+              <img
+                src="./assets/t4.webp"
+                alt="Senior High School"
+                class="card-img"
+              />
+              <h3 class="card-title">Senior High School</h3>
+              <p class="card-body">
+                Prepare to achieve more in the future with our Academic and Arts &
+                Design tracks.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -233,11 +251,161 @@
       </div>
     </div>
 
+    <!-- Scroll to top button -->
+    <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top">
+      <i class="bi bi-arrow-up"></i>
+    </button>
+
     <!--BS5 script-->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
       crossorigin="anonymous"
     ></script>
+    
+    <!-- Custom JavaScript -->
+    <script>
+      // Remove preload class to enable animations
+      window.addEventListener('load', function() {
+        document.body.classList.remove('preload');
+      });
+
+      // Smooth scroll behavior enhancement
+      document.addEventListener('DOMContentLoaded', function() {
+        // Add scroll event listener for navbar enhancement
+        let scrollIndicatorShown = false;
+        let lastScrollPosition = 0;
+        
+        window.addEventListener('scroll', function() {
+          const navbar = document.querySelector('.navbar');
+          const scrollIndicator = document.querySelector('.scroll-indicator');
+          const scrollToTopBtn = document.getElementById('scrollToTop');
+          const firstSection = document.querySelector('#info1');
+          const firstSectionTop = firstSection ? firstSection.offsetTop : 0;
+          
+          // Navbar transparency logic
+          if (window.scrollY < 50) {
+            // At the very top - transparent navbar
+            navbar.classList.remove('scrolled');
+            navbar.classList.add('transparent');
+          } else if (window.scrollY < firstSectionTop - 100) {
+            // In hero section but scrolled - semi-transparent
+            navbar.classList.remove('scrolled', 'transparent');
+          } else {
+            // Past hero section - solid navbar
+            navbar.classList.add('scrolled');
+            navbar.classList.remove('transparent');
+          }
+          
+          // Scroll indicator logic - hide when scrolling down from hero
+          if (scrollIndicator && scrollIndicatorShown) {
+            if (window.scrollY > 100) {
+              scrollIndicator.style.opacity = '0';
+              scrollIndicator.style.transform = 'translateX(-50%) translateY(20px)';
+              scrollIndicator.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+            } else {
+              scrollIndicator.style.opacity = '1';
+              scrollIndicator.style.transform = 'translateX(-50%) translateY(0)';
+              scrollIndicator.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+            }
+          }
+          
+          // Scroll to top button logic
+          if (scrollToTopBtn) {
+            if (window.scrollY > 300) {
+              scrollToTopBtn.classList.add('show');
+            } else {
+              scrollToTopBtn.classList.remove('show');
+            }
+          }
+          
+          lastScrollPosition = window.scrollY;
+        });
+        
+        // Show scroll indicator after hero animation completes
+        setTimeout(() => {
+          const scrollIndicator = document.querySelector('.scroll-indicator');
+          if (scrollIndicator) {
+            scrollIndicatorShown = true;
+            // Only show if we're still at the top of the page
+            if (window.scrollY <= 50) {
+              scrollIndicator.style.opacity = '1';
+              scrollIndicator.style.transform = 'translateX(-50%) translateY(0)';
+            }
+          }
+        }, 2500);
+
+        // Scroll indicator click functionality
+        const scrollIndicator = document.querySelector('.scroll-indicator');
+        if (scrollIndicator) {
+          scrollIndicator.addEventListener('click', function() {
+            const nextSection = document.querySelector('#info1');
+            if (nextSection) {
+              nextSection.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+              });
+            }
+          });
+        }
+
+        // Enhanced smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+          anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+              target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+              });
+            }
+          });
+        });
+
+        // Add scroll animations
+        const observerOptions = {
+          threshold: 0.1,
+          rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.style.opacity = '1';
+              entry.target.style.transform = 'translateY(0)';
+            }
+          });
+        }, observerOptions);
+
+        // Observe program cards for animation
+        document.querySelectorAll('.program-card').forEach((card, index) => {
+          card.style.opacity = '0';
+          card.style.transform = 'translateY(30px)';
+          card.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`;
+          observer.observe(card);
+        });
+
+        // Add staggered animation to program cards
+        const programTitle = document.querySelector('.program-title');
+        if (programTitle) {
+          programTitle.style.opacity = '0';
+          programTitle.style.transform = 'translateY(30px)';
+          programTitle.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+          observer.observe(programTitle);
+        }
+
+        // Scroll to top button functionality
+        const scrollToTopBtn = document.getElementById('scrollToTop');
+        if (scrollToTopBtn) {
+          scrollToTopBtn.addEventListener('click', function() {
+            window.scrollTo({
+              top: 0,
+              behavior: 'smooth'
+            });
+          });
+        }
+      });
+    </script>
   </body>
 </html>

@@ -1,0 +1,107 @@
+/* Hero section styles */
+@media (min-width: 768px) {
+  #main-page {
+    font-family: Bebas Neue;
+    color: hsl(350, 71%, 44%);
+    letter-spacing: 0.2em;
+    height: 100vh;
+    align-items: center;
+    scroll-snap-align: start;
+    position: relative;
+  }
+  
+  .hero-content {
+    text-align: center;
+    position: relative;
+  }
+  
+  .hero-text {
+    font-size: 240px;
+    opacity: 0;
+    transform: translateY(50px) scale(0.8);
+    animation: heroEntrance 2s ease-out forwards;
+    text-shadow: 0 4px 8px rgba(193, 33, 61, 0.3);
+  }
+}
+
+@media (max-width: 767px) {
+  #main-page {
+    font-family: Bebas Neue;
+    color: #c1213d;
+    letter-spacing: 0.2em;
+    height: 100vh;
+    scroll-snap-align: start;
+    position: relative;
+  }
+  
+  .hero-content {
+    text-align: center;
+    position: relative;
+  }
+  
+  .hero-text {
+    font-size: 180px;
+    opacity: 0;
+    transform: translateY(50px) scale(0.8);
+    animation: heroEntrance 2s ease-out forwards;
+    text-shadow: 0 4px 8px rgba(193, 33, 61, 0.3);
+  }
+}
+
+@media (max-width: 576px) {
+  #main-page {
+    font-family: Bebas Neue;
+    color: #c1213d;
+    letter-spacing: 0.2em;
+    height: 100vh;
+    scroll-snap-align: start;
+    position: relative;
+    padding-top: 80px;
+  }
+  
+  .hero-content {
+    text-align: center;
+    position: relative;
+  }
+  
+  .hero-text {
+    font-size: 120px;
+    opacity: 0;
+    transform: translateY(50px) scale(0.8);
+    animation: heroEntrance 2s ease-out forwards;
+    text-shadow: 0 4px 8px rgba(193, 33, 61, 0.3);
+  }
+}
+
+/* Enhanced hero section background */
+#main-page {
+  background: linear-gradient(135deg, #fdfdfd 0%, #f8f9fa 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+#main-page::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 30% 70%, rgba(252, 196, 3, 0.1) 0%, transparent 50%),
+              radial-gradient(circle at 70% 30%, rgba(193, 33, 61, 0.1) 0%, transparent 50%);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+/* Additional hero text effects */
+.hero-text {
+  background: linear-gradient(135deg, #c1213d 0%, #d63384 50%, #c1213d 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  position: relative;
+}

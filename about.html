@@ -20,7 +20,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
     />
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./styles-new.css" />
   </head>
   <!-- -->
   <body>
@@ -62,48 +62,52 @@
     </nav>
     <!--header-->
     <div class="history container-sm min-vh-100 align-items-center d-flex">
-      <div class="row gap-sm-5 gap-lg-0 align-items-center">
-        <div class="col-md-12 col-lg-4 text-center text-lg-start">
-          <div class="about">History</div>
-        </div>
-        <div class="col text-lg-start text-center">
-          <p>
-            Founded in 1925 by Don Tomas Mapúa, an architecture graduate of
-            Cornell University, Mapúa University is the Philippines’ premier
-            engineering and technological school. It is globally recognized,
-            ranking in the Top 501-550 in the 2021 QS Asia University Rankings.
-            Mapúa offers excellence in various fields, including engineering,
-            sciences, architecture, design, information technology,
-            communication, media studies, social sciences, education,
-            accountancy, and business management.
-          </p>
-          <p>
-            Mapúa's undergraduate programs have received recognition from local
-            and international accreditation bodies. It is the first school in
-            Southeast Asia accredited by ABET, offering 11 engineering programs
-            and 3 computing programs accredited by ABET's Engineering
-            Accreditation Commission and Computing Accreditation Commission,
-            respectively. The University has also been named a Center of
-            Excellence by the Philippines' Commission on Higher Education in
-            several engineering and information technology programs.
-          </p>
-          <p>
-            Championing sustainability and innovation, Mapúa holds ISO
-            certifications for environmental and quality management systems. It
-            utilizes cutting-edge technology, such as the Cardinal EDGE
-            platform, which facilitates real-time video conferencing for virtual
-            classrooms and provides digital solutions like Digital Day and
-            Digital Rush for enhanced learning experiences.
-          </p>
-          <p>
-            Mapúa ÚOx offers asynchronous fully online graduate and
-            undergraduate programs, empowering students to learn at their own
-            pace and space. The University is dedicated to producing
-            high-caliber graduates, evident through its 379 board topnotchers
-            across various licensure examinations. International exposure and
-            research initiatives further equip students to become future
-            enablers of solutions to industry and community challenges.
-          </p>
+      <div class="container">
+        <div class="row gap-sm-5 gap-lg-0 align-items-center">
+          <div class="col-md-12 col-lg-4 text-center text-lg-start mb-4 mb-lg-0">
+            <div class="about">History</div>
+          </div>
+          <div class="col text-lg-start text-center">
+            <div class="content-wrapper">
+              <p>
+                Founded in 1925 by Don Tomas Mapúa, an architecture graduate of
+                Cornell University, Mapúa University is the Philippines' premier
+                engineering and technological school. It is globally recognized,
+                ranking in the Top 501-550 in the 2021 QS Asia University Rankings.
+                Mapúa offers excellence in various fields, including engineering,
+                sciences, architecture, design, information technology,
+                communication, media studies, social sciences, education,
+                accountancy, and business management.
+              </p>
+              <p>
+                Mapúa's undergraduate programs have received recognition from local
+                and international accreditation bodies. It is the first school in
+                Southeast Asia accredited by ABET, offering 11 engineering programs
+                and 3 computing programs accredited by ABET's Engineering
+                Accreditation Commission and Computing Accreditation Commission,
+                respectively. The University has also been named a Center of
+                Excellence by the Philippines' Commission on Higher Education in
+                several engineering and information technology programs.
+              </p>
+              <p>
+                Championing sustainability and innovation, Mapúa holds ISO
+                certifications for environmental and quality management systems. It
+                utilizes cutting-edge technology, such as the Cardinal EDGE
+                platform, which facilitates real-time video conferencing for virtual
+                classrooms and provides digital solutions like Digital Day and
+                Digital Rush for enhanced learning experiences.
+              </p>
+              <p>
+                Mapúa ÚOx offers asynchronous fully online graduate and
+                undergraduate programs, empowering students to learn at their own
+                pace and space. The University is dedicated to producing
+                high-caliber graduates, evident through its 379 board topnotchers
+                across various licensure examinations. International exposure and
+                research initiatives further equip students to become future
+                enablers of solutions to industry and community challenges.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -227,11 +231,103 @@
       </div>
     </div>
 
+    <!-- Scroll to top button -->
+    <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top">
+      <i class="bi bi-arrow-up"></i>
+    </button>
+
     <!--BS5 script-->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
       crossorigin="anonymous"
     ></script>
+    
+    <!-- Custom JavaScript for about page -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // Smooth scroll enhancement
+        const navbar = document.querySelector('.navbar');
+        const scrollToTopBtn = document.getElementById('scrollToTop');
+        
+        window.addEventListener('scroll', function() {
+          if (window.scrollY < 50) {
+            navbar.classList.add('transparent');
+            navbar.classList.remove('scrolled');
+          } else {
+            navbar.classList.remove('transparent');
+            navbar.classList.add('scrolled');
+          }
+          
+          // Scroll to top button logic
+          if (scrollToTopBtn) {
+            if (window.scrollY > 300) {
+              scrollToTopBtn.classList.add('show');
+            } else {
+              scrollToTopBtn.classList.remove('show');
+            }
+          }
+        });
+        
+        // Scroll to top button functionality
+        if (scrollToTopBtn) {
+          scrollToTopBtn.addEventListener('click', function() {
+            window.scrollTo({
+              top: 0,
+              behavior: 'smooth'
+            });
+          });
+        }
+
+        // Enhanced smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+          anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+              target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+              });
+            }
+          });
+        });
+
+        // Section animations
+        const observerOptions = {
+          threshold: 0.2,
+          rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.style.opacity = '1';
+              entry.target.style.transform = 'translateY(0)';
+            }
+          });
+        }, observerOptions);
+
+        // Observe sections for animation
+        document.querySelectorAll('.history, .logo').forEach(section => {
+          section.style.opacity = '0';
+          section.style.transform = 'translateY(30px)';
+          section.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+          observer.observe(section);
+        });
+
+        // Animate paragraphs with stagger effect
+        document.querySelectorAll('.history p, .logo p').forEach((p, index) => {
+          p.style.opacity = '0';
+          p.style.transform = 'translateY(20px)';
+          p.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`;
+          
+          setTimeout(() => {
+            p.style.opacity = '1';
+            p.style.transform = 'translateY(0)';
+          }, 500 + (index * 100));
+        });
+      });
+    </script>
   </body>
 </html>

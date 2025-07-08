@@ -1,0 +1,31 @@
+/* Main stylesheet - imports all component stylesheets */
+
+/* Base styles and global settings */
+@import url('./css/base.css');
+
+/* Animations */
+@import url('./css/animations.css');
+
+/* Navigation */
+@import url('./css/navigation.css');
+
+/* Hero section */
+@import url('./css/hero.css');
+
+/* Scroll indicators and buttons */
+@import url('./css/scroll.css');
+
+/* Page sections (info, news, footer) */
+@import url('./css/sections.css');
+
+/* Programs section */
+@import url('./css/programs.css');
+
+/* Forms */
+@import url('./css/forms.css');
+
+/* About page */
+@import url('./css/about.css');
+
+/* Utilities and accessibility */
+@import url('./css/utilities.css');

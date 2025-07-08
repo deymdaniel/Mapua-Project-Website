@@ -1,0 +1,73 @@
+/* Base styles and global settings */
+html {
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
+body {
+  box-sizing: border-box;
+  padding-top: 70px;
+}
+
+/* Preload animation prevention */
+.preload * {
+  animation-duration: 0s !important;
+  animation-delay: 0s !important;
+  transition-duration: 0s !important;
+  transition-delay: 0s !important;
+}
+
+/* Smooth transitions for all elements */
+* {
+  transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Loading animation for images */
+.card-img, img {
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.card-img:hover, img:hover {
+  transform: scale(1.02);
+  filter: brightness(1.1);
+}
+
+/* Enhanced scrollbar for webkit browsers */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #c1213d, #fcc403);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #a01e35, #e6a500);
+}
+
+/* Content wrapper for better text readability */
+.content-wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.content-wrapper p {
+  position: relative;
+  padding-left: 20px;
+}
+
+.content-wrapper p::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 4px;
+  height: 4px;
+  background: #fcc403;
+  border-radius: 50%;
+}

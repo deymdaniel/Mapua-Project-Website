@@ -20,7 +20,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
     />
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./styles-new.css" />
   </head>
   <!-- -->
   <body>
@@ -65,55 +65,70 @@
       class="container-sm d-flex min-vh-100 flex-column gap-5 pt-5 p-md-0 justify-content-center contact"
     >
       <h2 class="form-title text-center">Contact Us</h2>
-      <div class="container d-flex">
-        <div class="line me-4"></div>
-
-        <form class="w-100">
-          <div class="mb-3">
-            <label for="name" class="form-label">Name</label>
-            <input
-              type="text"
-              class="form-control"
-              id="name"
-              name="name"
-              required
-            />
-          </div>
-          <div class="mb-3">
-            <label for="email" class="form-label">Email</label>
-            <input
-              type="email"
-              class="form-control"
-              id="email"
-              name="email"
-              required
-            />
-          </div>
-          <div class="mb-3">
-            <label for="phone" class="form-label">Phone</label>
-            <input
-              type="tel"
-              class="form-control"
-              id="phone"
-              name="phone"
-              required
-            />
-          </div>
-          <div class="mb-3">
-            <label for="type" class="form-label">Type</label>
-            <select class="form-select" id="type" name="type" required>
-              <option value="" selected disabled>Select type</option>
-              <option value="">Application</option>
-              <option value="">Payment</option>
-              <option value="">Enrollment</option>
-              <option value="">Assessment</option>
-              <option value="">Program</option>
-              <option value="">Other</option>
-            </select>
-          </div>
-          <div class="mb-3">
-            <label for="case-reason" class="form-label">Case Reason</label>
-            <select class="form-select" id="type" name="type" required>
+      <div class="form-container">
+        <div class="container d-flex">
+          <div class="line me-4"></div>
+          <form class="w-100" novalidate>
+            <div class="mb-3">
+              <label for="name" class="form-label">Name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="name"
+                name="name"
+                required
+                placeholder="Enter your full name"
+              />
+              <div class="invalid-feedback">
+                Please provide a valid name.
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                name="email"
+                required
+                placeholder="Enter your email address"
+              />
+              <div class="invalid-feedback">
+                Please provide a valid email address.
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="phone" class="form-label">Phone</label>
+              <input
+                type="tel"
+                class="form-control"
+                id="phone"
+                name="phone"
+                required
+                placeholder="Enter your phone number"
+              />
+              <div class="invalid-feedback">
+                Please provide a valid phone number.
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="type" class="form-label">Type</label>
+              <select class="form-select" id="type" name="type" required>
+                <option value="" selected disabled>Select type</option>
+                <option value="Application">Application</option>
+                <option value="Payment">Payment</option>
+                <option value="Enrollment">Enrollment</option>
+                <option value="Assessment">Assessment</option>
+                <option value="Program">Program</option>
+                <option value="Other">Other</option>
+              </select>
+              <div class="invalid-feedback">
+                Please select a type.
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="case-reason" class="form-label">Case Reason</label>
+              <select class="form-select" id="case-reason" name="case-reason" required>
               <option value="" selected disabled>Select case reason</option>
               <option value="Forgot Username and Password">
                 Forgot Username and Password
@@ -253,18 +268,23 @@
               required
             />
           </div>
-          <div class="mb-3">
-            <label for="description" class="form-label">Description</label>
-            <textarea
-              class="form-control"
-              id="description"
-              name="description"
-              rows="6"
-              required
-            ></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
+            <div class="mb-3">
+              <label for="description" class="form-label">Description</label>
+              <textarea
+                class="form-control"
+                id="description"
+                name="description"
+                rows="6"
+                required
+                placeholder="Please describe your issue in detail..."
+              ></textarea>
+              <div class="invalid-feedback">
+                Please provide a description of your issue.
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit Request</button>
+          </form>
+        </div>
       </div>
     </div>
     <!--footer-->
@@ -335,11 +355,101 @@
       </div>
     </div>
 
+    <!-- Scroll to top button -->
+    <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top">
+      <i class="bi bi-arrow-up"></i>
+    </button>
+
     <!--BS5 script-->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
       crossorigin="anonymous"
     ></script>
+    
+    <!-- Custom JavaScript for contact form -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // Form validation
+        const forms = document.querySelectorAll('form[novalidate]');
+        
+        forms.forEach(form => {
+          form.addEventListener('submit', function(event) {
+            if (!form.checkValidity()) {
+              event.preventDefault();
+              event.stopPropagation();
+            }
+            form.classList.add('was-validated');
+          });
+
+          // Real-time validation
+          const inputs = form.querySelectorAll('input, select, textarea');
+          inputs.forEach(input => {
+            input.addEventListener('blur', function() {
+              if (this.checkValidity()) {
+                this.classList.remove('is-invalid');
+                this.classList.add('is-valid');
+              } else {
+                this.classList.remove('is-valid');
+                this.classList.add('is-invalid');
+              }
+            });
+
+            input.addEventListener('input', function() {
+              if (this.classList.contains('is-invalid') && this.checkValidity()) {
+                this.classList.remove('is-invalid');
+                this.classList.add('is-valid');
+              }
+            });
+          });
+        });
+
+        // Navbar scroll effects
+        const navbar = document.querySelector('.navbar');
+        const scrollToTopBtn = document.getElementById('scrollToTop');
+        
+        window.addEventListener('scroll', function() {
+          if (window.scrollY < 50) {
+            navbar.classList.add('transparent');
+            navbar.classList.remove('scrolled');
+          } else {
+            navbar.classList.remove('transparent');
+            navbar.classList.add('scrolled');
+          }
+          
+          // Scroll to top button logic
+          if (scrollToTopBtn) {
+            if (window.scrollY > 300) {
+              scrollToTopBtn.classList.add('show');
+            } else {
+              scrollToTopBtn.classList.remove('show');
+            }
+          }
+        });
+        
+        // Scroll to top button functionality
+        if (scrollToTopBtn) {
+          scrollToTopBtn.addEventListener('click', function() {
+            window.scrollTo({
+              top: 0,
+              behavior: 'smooth'
+            });
+          });
+        }
+
+        // Form container animation
+        const formContainer = document.querySelector('.form-container');
+        if (formContainer) {
+          formContainer.style.opacity = '0';
+          formContainer.style.transform = 'translateY(30px)';
+          
+          setTimeout(() => {
+            formContainer.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            formContainer.style.opacity = '1';
+            formContainer.style.transform = 'translateY(0)';
+          }, 200);
+        }
+      });
+    </script>
   </body>
 </html>
